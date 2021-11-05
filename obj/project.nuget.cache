@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "90znGRDu9wluFl9qCBg6jyWo+wXoZTalXAT3d+R/WjEraa8LRDQLTZhfncBx6/AYqJTDJ2Tim0kn7ACpCBZCXg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Viviane\\Desktop\\Nova pasta\\tudo sobre a faculdade\\Projetos da faculdade\\Projeto 3 Periodo\\Backend\\SCACback\\SCACback.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Viviane\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.18\\microsoft.netcore.app.host.win-x64.3.1.18.nupkg.sha512"
+  ],
+  "logs": []
+}
