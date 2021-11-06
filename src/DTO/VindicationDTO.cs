@@ -12,7 +12,7 @@ namespace SCACback.src.DTO
         public string CompletionDate { get; set; }
         public string OpenDate { get; set; }
 
-        public CommunityLeaderDTO CommunityLeader { get; set; }
+        public CommunityLeader CommunityLeader { get; set; }
         public Resident Resident { get; set; }
         public Status Status { get; set; }
         public OrgPublic OrgPublic { get; set; }

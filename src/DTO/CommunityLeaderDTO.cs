@@ -10,8 +10,8 @@ namespace SCACback.src.DTO
         public string FullName { get; set; }
         public string Rg { get; set; }
         public string Cpf { get; set; }
-        public string EntryDate { get; set; }
-        public string? ExitDate { get; set; }
+        public DateTime EntryDate { get; set; }
+        public DateTime? ExitDate { get; set; }
 
     }
 }
