@@ -25,23 +25,30 @@ namespace SCACback.src.Entities
         public int Id { get; set; }
 
         [MaxLength(150)]
+        [Required]
         public string FullName { get; set; }
 
         [MaxLength(9)]
         [MinLength(7)]
+        [Required]
         public string Rg { get; set; }
 
         [MaxLength(15)]
         [MinLength(12)]
+        [Required]
         public string Cpf { get; set; }
 
 
         [MaxLength(20)]
         [MinLength(8)]
+        [Required]
         public string Login { get; set; }
 
         [MinLength(8)]
+        [Required]
         public string Password { get; set; }
+
+        [Required]
         public DateTime EntryDate { get; set; }
         public DateTime? ExitDate { get; set; }
 

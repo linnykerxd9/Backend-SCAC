@@ -18,6 +18,7 @@ namespace SCACback.src.Entities
         [Key]
         public int Id { get; set; }
         [MaxLength(30)]
+        [Required]
         public string Description { get; set; }
     }
 }

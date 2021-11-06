@@ -21,12 +21,15 @@ namespace SCACback.src.Entities
         [Key]
         public int Id { get; set; }
         [MaxLength(250)]
+        [Required]
         public string Name { get; set; }
         [MaxLength(150)]
         public string Responsible { get; set; }
         [MaxLength(100)]
+        [Required]
         public string Email { get; set; }
         [MaxLength(15)]
+        [Required]
         public string Telephone { get; set; }
 
     }

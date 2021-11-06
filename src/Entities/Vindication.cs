@@ -27,10 +27,12 @@ namespace SCACback.src.Entities
         [Key]
         public int Id { get; set; }
         [MaxLength(250)]
+        [Required]
         public string Description { get; set; }
         [MaxLength(10)]
         public string CompletionDate { get; set; }
         [MaxLength(10)]
+        [Required]
         public string OpenDate { get; set; }
         public int IdLeader { get; set; }
         public int IdResident { get; set; }
