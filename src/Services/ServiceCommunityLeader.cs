@@ -42,10 +42,10 @@ namespace Backend_SCAC.src.Services
             return all;
         }
 
-        public async Task<CommunityLeaderDTO> GetById(int id)
+        public async Task<CommunityLeader> GetById(int id)
         {
             CommunityLeader communityLeader = await repository.CommunityLeader.FirstOrDefaultAsync(h => h.Id == id);
-            return communityLeader.ToDTO();
+            return communityLeader;
         }
 
         public async Task<CommunityLeaderDTO> Update(CommunityLeader item)

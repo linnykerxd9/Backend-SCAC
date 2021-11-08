@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Backend_SCAC.src.Services;
+using Microsoft.AspNetCore.Mvc;
+using SCACback.src.DTO;
+using SCACback.src.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,11 +9,45 @@ using System.Threading.Tasks;
 
 namespace Backend_SCAC.src.Controllers
 {
-    public class CommunityLeaderController : Controller
+    [ApiController]
+    [Route("api/v1/leader")]
+    public class CommunityLeaderController
     {
-        public IActionResult Index()
+        private readonly ServiceCommunityLeader service;
+
+        public CommunityLeaderController(ServiceCommunityLeader service)
         {
-            return View();
+            this.service = service;
+        }
+
+        [HttpPost]
+        public Task<CommunityLeaderDTO> Create([FromBody] CommunityLeader item)
+        {
+            return service.Create(item);
+        }
+
+        [HttpGet]
+        public List<CommunityLeader> GetAll()
+        {
+            return service.GetAll();
+        }
+
+        [HttpGet("{id:int}")]
+        public Task<CommunityLeader> GetById([FromRoute] int id)
+        {
+            return service.GetById(id);
+        }
+
+        [HttpPut]
+        public Task<CommunityLeaderDTO> UpdateEvent([FromBody] CommunityLeader item)
+        {
+            return service.Update(item);
+        }
+
+        [HttpDelete]
+        public Task<CommunityLeaderDTO> DeleteEvent([FromBody] CommunityLeader item)
+        {
+            return service.Delete(item);
         }
     }
 }

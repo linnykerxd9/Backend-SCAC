@@ -44,12 +44,12 @@ namespace Backend_SCAC.src.Services
      
         }
 
-        public async Task<EventDTO> GetById(int id)
+        public async Task<Event> GetById(int id)
         {
             Event queryEvent = await repository.Event.Include("Status")
                                                      .FirstOrDefaultAsync(h => h.Id == id);
 
-            return queryEvent.ToDTO();
+            return queryEvent;
         }
 
         public async Task<EventDTO> Update(Event item)

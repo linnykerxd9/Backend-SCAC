@@ -5,8 +5,10 @@ using System.Threading.Tasks;
 
 namespace Backend_SCAC.src.Interfaces
 {
-    interface IServiceGetAll<T>
+    interface IServiceGet<T>
     {
         public List<T> GetAll();
+        public Task<T> GetById(int id);
+
     }
 }

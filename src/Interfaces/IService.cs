@@ -12,7 +12,6 @@ namespace Backend_SCAC.src.Interfaces
         public  Task<T> Delete(R item);
         public  Task<T> Update(R item);
      
-        public  Task<T> GetById(int id);
 
     }
 }

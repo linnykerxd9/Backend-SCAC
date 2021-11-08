@@ -33,7 +33,7 @@ namespace SCACback.src.Controllers
         }
 
         [HttpGet("{id:int}")]
-        public Task<EventDTO> GetById([FromRoute]int id)
+        public Task<Event> GetById([FromRoute]int id)
         {
             return service.GetById(id);
         }
