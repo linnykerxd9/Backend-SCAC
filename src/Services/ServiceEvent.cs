@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Backend_SCAC.src.Services
 {
-    public class ServiceEvent : IService<EventDTO, Event>, IServiceGetAll<Event>
+    public class ServiceEvent : IService<EventDTO, Event>, IServiceGet<Event>
     {
         private readonly Repository repository;
 

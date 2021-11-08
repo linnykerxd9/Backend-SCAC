@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Backend_SCAC.src.Services
 {
-    public class ServiceCommunityLeader : IService<CommunityLeaderDTO, CommunityLeader>,IServiceGetAll<CommunityLeader>
+    public class ServiceCommunityLeader : IService<CommunityLeaderDTO, CommunityLeader>,IServiceGet<CommunityLeader>
     {
         private readonly Repository repository;
 

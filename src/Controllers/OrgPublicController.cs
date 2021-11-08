@@ -1,51 +1,50 @@
 ﻿using Backend_SCAC.src.Services;
 using Microsoft.AspNetCore.Mvc;
-using SCACback.src.DTO;
 using SCACback.src.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SCACback.src.Controllers
+namespace Backend_SCAC.src.Controllers
 {
-    [ApiController]
-    [Route("api/v1/event")]
-    public class EventController
+     [ApiController]
+     [Route("api/v1/orgPublic")]
+    public class OrgPublicController
     {
-        private readonly ServiceEvent service;
+        private readonly ServiceOrgPublic service;
 
-        public EventController(ServiceEvent service)
+        public OrgPublicController(ServiceOrgPublic service)
         {
             this.service = service;
         }
 
         [HttpPost]
-        public Task<EventDTO> Create([FromBody] Event item)
+        public Task<OrgPublic> Create([FromBody] OrgPublic item)
         {
             return service.Create(item);
         }
 
         [HttpGet]
-        public List<Event> GetAll()
+        public List<OrgPublic> GetAll()
         {
             return service.GetAll();
         }
 
         [HttpGet("{id:int}")]
-        public Task<EventDTO> GetById([FromRoute]int id)
+        public Task<OrgPublic> GetById([FromRoute] int id)
         {
             return service.GetById(id);
         }
 
         [HttpPut]
-        public Task<EventDTO> UpdateEvent([FromBody]Event item)
+        public Task<OrgPublic> UpdateEvent([FromBody] OrgPublic item)
         {
             return service.Update(item);
         }
 
         [HttpDelete]
-        public Task<EventDTO> DeleteEvent([FromBody] Event item)
+        public Task<OrgPublic> DeleteEvent([FromBody] OrgPublic item)
         {
             return service.Delete(item);
         }

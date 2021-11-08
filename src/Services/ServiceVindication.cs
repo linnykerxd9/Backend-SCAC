@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Backend_SCAC.src.Services
 {
-    public class ServiceVindication : IService<VindicationDTO, Vindication>, IServiceGetAll<Vindication>
+    public class ServiceVindication : IService<VindicationDTO, Vindication>, IServiceGet<Vindication>
     {
         private readonly Repository repository;
 
@@ -48,7 +48,7 @@ namespace Backend_SCAC.src.Services
             return all;
         }
 
-        public async Task<VindicationDTO> GetById(int id)
+        public async Task<Vindication> GetById(int id)
         {
             Vindication vindication = await repository.Vindication.Include("CommunityLeader")
                                                                   .Include("Resident")
@@ -56,7 +56,7 @@ namespace Backend_SCAC.src.Services
                                                                   .Include("OrgPublic")
                                                                   .Include("Priority")
                                                                   .FirstOrDefaultAsync(h => h.Id == id);
-              return vindication.ToDTO();
+              return vindication;
         }
 
         public async Task<VindicationDTO> Update(Vindication item)

@@ -52,7 +52,7 @@ namespace SCACback.src.Entities
         public DateTime EntryDate { get; set; }
         public DateTime? ExitDate { get; set; }
 
-        public void updateExit()
+        public void UpdateExit()
         {
             this.ExitDate = DateTime.Now;
         }

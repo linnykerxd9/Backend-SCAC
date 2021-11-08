@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Backend_SCAC.src.Services
 {
-    public class ServiceStatus: IService<Status, Status>,IServiceGetAll<Status>
+    public class ServiceStatus: IService<Status, Status>,IServiceGet<Status>
     {
         private readonly Repository repository;
 

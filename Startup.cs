@@ -31,8 +31,16 @@ namespace Backend_SCAC
         {
             var connect = Configuration.GetSection("ConnectionStrings:DefaultConnection");
             services.AddDbContext<Repository>(options => options.UseSqlServer(connect.Value));
+
             services.AddScoped<Repository, Repository>();
             services.AddScoped<ServiceEvent, ServiceEvent>();
+            services.AddScoped<ServiceCommunityLeader, ServiceCommunityLeader>();
+            services.AddScoped<ServiceOrgPublic, ServiceOrgPublic>();
+            services.AddScoped<ServicePriority, ServicePriority>();
+            services.AddScoped<ServiceResident, ServiceResident>();
+            services.AddScoped<ServiceStatus, ServiceStatus>();
+            services.AddScoped<ServiceVindication, ServiceVindication>();
+
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
