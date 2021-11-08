@@ -43,12 +43,14 @@ namespace SCACback.src.Entities
 
         public EventDTO ToDTO()
         {
-            EventDTO parseDTO = new EventDTO();
-            parseDTO.NameResponsible = this.NameResponsible;
-            parseDTO.Date = this.Date;
-            parseDTO.Hour = this.Hour;
-            parseDTO.Description = this.Description;
-            parseDTO.Status = this.Status;
+            EventDTO parseDTO = new()
+            {
+                NameResponsible = this.NameResponsible,
+                Date = this.Date,
+                Hour = this.Hour,
+                Description = this.Description,
+                Status = this.Status
+            };
 
             return parseDTO;
         }

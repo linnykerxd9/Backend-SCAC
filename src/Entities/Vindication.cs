@@ -54,15 +54,17 @@ namespace SCACback.src.Entities
 
         public VindicationDTO ToDTO()
         {
-            VindicationDTO parseDTO = new VindicationDTO();
-            parseDTO.Description = this.Description;
-            parseDTO.CompletionDate = this.CompletionDate;
-            parseDTO.OpenDate = this.OpenDate;
-            parseDTO.CommunityLeader = this.CommunityLeader;
-            parseDTO.Resident = this.Resident;
-            parseDTO.Status = this.Status;
-            parseDTO.OrgPublic = this.OrgPublic;
-            parseDTO.Priority = this.Priority;
+            VindicationDTO parseDTO = new()
+            {
+                Description = this.Description,
+                CompletionDate = this.CompletionDate,
+                OpenDate = this.OpenDate,
+                CommunityLeader = this.CommunityLeader,
+                Resident = this.Resident,
+                Status = this.Status,
+                OrgPublic = this.OrgPublic,
+                Priority = this.Priority
+            };
 
             return parseDTO;
 

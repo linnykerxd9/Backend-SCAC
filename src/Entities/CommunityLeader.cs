@@ -59,12 +59,14 @@ namespace SCACback.src.Entities
 
         public CommunityLeaderDTO ToDTO()
         {
-            CommunityLeaderDTO parseDTO = new CommunityLeaderDTO();
-            parseDTO.FullName = this.FullName;
-            parseDTO.Rg = this.Rg;
-            parseDTO.Cpf = this.Cpf;
-            parseDTO.EntryDate = this.EntryDate;
-            parseDTO.ExitDate = this.ExitDate;
+            CommunityLeaderDTO parseDTO = new()
+            {
+                FullName = this.FullName,
+                Rg = this.Rg,
+                Cpf = this.Cpf,
+                EntryDate = this.EntryDate,
+                ExitDate = this.ExitDate
+            };
 
             return parseDTO;
             

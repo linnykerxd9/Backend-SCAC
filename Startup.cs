@@ -1,4 +1,5 @@
 using Backend_SCAC.src.Repositories;
+using Backend_SCAC.src.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -31,6 +32,7 @@ namespace Backend_SCAC
             var connect = Configuration.GetSection("ConnectionStrings:DefaultConnection");
             services.AddDbContext<Repository>(options => options.UseSqlServer(connect.Value));
             services.AddScoped<Repository, Repository>();
+            services.AddScoped<ServiceEvent, ServiceEvent>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

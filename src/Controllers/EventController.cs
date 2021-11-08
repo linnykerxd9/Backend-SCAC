@@ -13,9 +13,9 @@ namespace SCACback.src.Controllers
     [Route("api/v1/event")]
     public class EventController
     {
-        Service service;
+        private readonly ServiceEvent service;
 
-        public EventController(Service service)
+        public EventController(ServiceEvent service)
         {
             this.service = service;
         }
@@ -24,6 +24,12 @@ namespace SCACback.src.Controllers
         public Task<EventDTO> Create([FromBody] Event item)
         {
             return service.Create(item);
+        }
+
+        [HttpGet]
+        public List<Event> GetAll()
+        {
+             return service.GetAll();
         }
 
     }
