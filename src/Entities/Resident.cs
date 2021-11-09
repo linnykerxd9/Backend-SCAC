@@ -49,8 +49,7 @@ namespace SCACback.src.Entities
         [MaxLength(15)]
         [Required]
         public string  Telephone { get; set; }
-        [MaxLength(1)]
-        [MinLength(1)]
+
         [Required]
         public char Sex { get; set; }
         [MaxLength(50)]

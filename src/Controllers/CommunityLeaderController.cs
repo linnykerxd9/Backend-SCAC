@@ -49,5 +49,19 @@ namespace Backend_SCAC.src.Controllers
         {
             return service.Delete(item);
         }
+
+        [HttpPut("exitDate")]
+        public Task<CommunityLeaderDTO> UpdateExitDate(CommunityLeader leader)
+        {
+            leader.UpdateExit();
+            return service.Update(leader);
+        }
+
+        [HttpPost("login")]
+        public Task<CommunityLeader> Login(string login,string password)
+        {
+            return  service.Login(login, password);
+            
+        }
     }
 }

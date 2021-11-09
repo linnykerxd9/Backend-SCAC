@@ -48,7 +48,6 @@ namespace SCACback.src.Entities
         [Required]
         public string Password { get; set; }
 
-        [Required]
         public DateTime EntryDate { get; set; }
         public DateTime? ExitDate { get; set; }
 

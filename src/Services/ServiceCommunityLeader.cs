@@ -54,5 +54,11 @@ namespace Backend_SCAC.src.Services
             await repository.SaveChangesAsync();
             return item.ToDTO();
         }
+
+        public async Task<CommunityLeader> Login(string login,string password)
+        {
+           CommunityLeader query = await repository.CommunityLeader.Where(l => l.Login == login && l.Password == password && l.ExitDate == null).FirstOrDefaultAsync();
+            return query;
+        }
     }
 }
