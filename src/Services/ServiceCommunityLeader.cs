@@ -17,7 +17,15 @@ namespace Backend_SCAC.src.Services
         public ServiceCommunityLeader(Repository repository)
         {
             this.repository = repository;
+
+            var migrationsPending = repository.Database.GetPendingMigrations();
+            if(migrationsPending.Count() > 0)
+            {
+                repository.Database.Migrate();
+            }
         }
+
+
 
         public async Task<CommunityLeaderDTO> Create(CommunityLeader item)
         {

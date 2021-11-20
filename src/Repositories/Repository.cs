@@ -12,6 +12,11 @@ namespace Backend_SCAC.src.Repositories
         public Repository(DbContextOptions options) 
             : base(options)
         {
+            var migrationsPending = this.Database.GetPendingMigrations();
+            if (migrationsPending.Count() > 0)
+            {
+                this.Database.Migrate();
+            }
         }
 
         public DbSet<CommunityLeader> CommunityLeader { get; set; }
@@ -21,5 +26,6 @@ namespace Backend_SCAC.src.Repositories
         public DbSet<Resident> Resident { get; set; }
         public DbSet<Status> Status { get; set; }
         public DbSet<Vindication> Vindication { get; set; }
+
     }
 }
