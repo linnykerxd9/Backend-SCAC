@@ -28,8 +28,8 @@ namespace Backend_SCAC.Migrations
 
                     b.Property<string>("Cpf")
                         .IsRequired()
-                        .HasMaxLength(15)
-                        .HasColumnType("nvarchar(15)");
+                        .HasMaxLength(11)
+                        .HasColumnType("nvarchar(11)");
 
                     b.Property<DateTime>("EntryDate")
                         .HasColumnType("datetime2");
@@ -178,8 +178,8 @@ namespace Backend_SCAC.Migrations
 
                     b.Property<string>("Cpf")
                         .IsRequired()
-                        .HasMaxLength(15)
-                        .HasColumnType("nvarchar(15)");
+                        .HasMaxLength(11)
+                        .HasColumnType("nvarchar(11)");
 
                     b.Property<string>("District")
                         .IsRequired()
@@ -203,7 +203,6 @@ namespace Backend_SCAC.Migrations
 
                     b.Property<string>("Sex")
                         .IsRequired()
-                        .HasMaxLength(1)
                         .HasColumnType("nvarchar(1)");
 
                     b.Property<string>("Telephone")

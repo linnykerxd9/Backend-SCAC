@@ -57,7 +57,7 @@ namespace Backend_SCAC.src.Controllers
             return service.Update(leader);
         }
 
-        [HttpPost("login")]
+        [HttpGet("login")]
         public Task<CommunityLeader> Login(string login,string password)
         {
             return  service.Login(login, password);

@@ -33,8 +33,8 @@ namespace SCACback.src.Entities
         [Required]
         public string Rg { get; set; }
 
-        [MaxLength(15)]
-        [MinLength(12)]
+
+        [StringLength(11)]
         [Required]
         public string Cpf { get; set; }
 
